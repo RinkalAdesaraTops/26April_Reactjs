@@ -1,0 +1,17 @@
+Diff b/w JS & React JS
+
+JS- DOM
+React JS- Virtual DOM
+diff b/w foreach & map
+filter & includes
+
+reduce & reduceRight 
+----Steps to Create React Project Using Vite-----
+npm create vite
+mention your project name
+select react option
+then Choose javascript
+change directory - folder
+npm install
+then open vs code
+type command - npm run dev
