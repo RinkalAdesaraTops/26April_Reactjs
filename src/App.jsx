@@ -16,7 +16,7 @@ function App() {
     
   })
   let b= arr.includes(220);
-  console.log(a);
+  console.log(a); //true false
   console.log(b);
   // let sm = arr.reduce((total,i,sum=5)=>{
   //   console.log(total);
@@ -32,6 +32,7 @@ function App() {
   });
   console.log(sm);
   return (
+   
     <Fragment>
     {/* <React.Fragment> */}
         <h1>My First Project</h1>
@@ -42,8 +43,6 @@ function App() {
 
           <h4>My Name is - {name}</h4>
           <h4>Array element is - {a}</h4>
-
-
 
         </div>
       {/* </React.Fragment> */}
