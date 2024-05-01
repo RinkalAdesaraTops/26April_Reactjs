@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  //Camelcase
   const customCSS = {
     color:'red',
     backgroundColor:'green'
@@ -12,8 +13,7 @@ function App() {
   const arr = [11,22,33,44,55]
   let a =  arr.filter((i)=>{
     // return i/2;
-    return i%2==0;  
-    
+    return i%2==0;    
   })
   let b= arr.includes(220);
   console.log(a); //true false

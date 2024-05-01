@@ -5,6 +5,7 @@ const Mycomponent = (props) => {
     //state- class component  & props- function component
     //within component          -- parent to child
     // let email = "abc@mail.com"
+    //hooks - useState
     const [email,setEmail] = useState("abc@mail.com")
     let obj = [{
         name:"Abc",
