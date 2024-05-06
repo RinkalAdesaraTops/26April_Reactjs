@@ -12,6 +12,7 @@ const ObjectAccess = () => {
         setUserdata({
             ...userdata, //spreading 
             [name]:value
+          
         })
         // let n = e.target.name
         // let val = e.target.value

@@ -15,6 +15,7 @@ import Menu from './Menu.jsx'
 import Home from './Home.jsx'
 import About from './About.jsx'
 import Contact from './Contact.jsx'
+import LifecycleClass from './LifecycleClass.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -25,15 +26,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Task1Class /> */}
     {/* <ObjectAccess /> */}
     {/* <BootstrapComponent /> */}
-    <HashRouter>
+    <BrowserRouter>
     <Menu />
     <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
+      <Route path='/home' element={<Home />}></Route>
+      <Route path='/about' element={<About />}></Route>
+      <Route path='/contact' element={<Contact />}></Route>
+      <Route path='/lifecycle' element={<LifecycleClass  color='blue'/>}></Route>
     </Routes>
-    </HashRouter>
-    
+    </BrowserRouter>    
   </React.StrictMode>,
 )
