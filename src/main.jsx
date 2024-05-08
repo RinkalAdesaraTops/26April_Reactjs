@@ -16,6 +16,7 @@ import Home from './Home.jsx'
 import About from './About.jsx'
 import Contact from './Contact.jsx'
 import LifecycleClass from './LifecycleClass.jsx'
+import LifecycleFunction from './LifecycleFunction.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/about' element={<About />}></Route>
       <Route path='/contact' element={<Contact />}></Route>
       <Route path='/lifecycle' element={<LifecycleClass  color='blue'/>}></Route>
+      <Route path='/lifecyclefunc' element={<LifecycleFunction  color='blue'/>}></Route>
     </Routes>
     </BrowserRouter>    
   </React.StrictMode>,
