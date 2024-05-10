@@ -16,9 +16,7 @@ const LifecycleFunction = (props) => {
         <h3>LifeCycle Function based</h3>
         {/* render */}
         Color is : {color}
-
     </div>
   )
 }
-
 export default LifecycleFunction

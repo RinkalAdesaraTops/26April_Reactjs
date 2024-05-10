@@ -15,12 +15,14 @@ const Menu = () => {
             {/* <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
             <Nav.Link href="/contact">Contact Us</Nav.Link> */}
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
             <Nav.Link as={Link} to="/lifecycle">Lifecycle - Class</Nav.Link>
             <Nav.Link as={Link} to="/lifecyclefunc">Lifecycle - Function</Nav.Link>
-            
+            <Nav.Link as={Link} to="/COntext">Use Context</Nav.Link>
+                 
           </Nav>
         </Navbar.Collapse>
       </Container>

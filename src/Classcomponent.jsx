@@ -5,8 +5,7 @@ export default class Classcomponent extends Component {
         super(props);
         this.state = {
             name:"class data"
-        }
-    
+        }  
     }
   render() {
     const changeColor = ()=>{
