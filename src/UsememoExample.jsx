@@ -1,30 +1,49 @@
-import React, { useState } from 'react'
+import React,{useState,useMemo} from 'react'
 
 const UsememoExample = () => {
+    const [task,setTask] = useState("")
     const [count,setCount] = useState(0)
     const [data,setData] = useState([])
-
     const addTask = ()=>{
-        setData((i)=>[...i,"Task1"])
-    }
+        // setData([...data,"task added.."])
+         setData([...data,task])
+         setTask('')
+     }
+     const addCounter = ()=>{
+        // setData([...data,"task added.."])
+         setCount(count+1)
+     }
+     const calcFunction = ({count})=>{
+        console.log('calc function called...');
+        for(let i=0;i<100000;i++){
+            count+=i;
+        }
+        console.log(count);
+        return count;
+     }
+     const calc = useMemo(()=> calcFunction({count}),[count])
+    
+    //  const calc = useMemo(()=>{
+    //     return calcFunction({count})
+    //  },[count]) 
   return (
-    <>
     <div>
-      <h3>Count is {count}</h3>
-      <button onClick={()=>setCount(count+1)}>Add</button>
+      <h3>Task List</h3>
       {
         data.map((i,index)=>{
-            return <p key={index}>{i}</p>
+            return(
+                <div key={index}>{i}</div>
+            )
         })
       }
-      
-
-      <h3>Task List</h3>
+      <input type='text' name="task" value={task} onChange={(e)=>setTask(e.target.value)}/>
       <button onClick={addTask}>Add Task</button>
-      
+
+      <h4>Count is :{count}</h4>
+      <button onClick={addCounter}>Add</button>
+
+      <h4>Calculation is : {calc}</h4>
     </div>
-    </>
   )
 }
-
 export default UsememoExample

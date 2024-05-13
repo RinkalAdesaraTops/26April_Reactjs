@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
@@ -20,6 +20,7 @@ import LifecycleFunction from './LifecycleFunction.jsx'
 import UsememoExample from './UsememoExample.jsx'
 import UseContextExample from './UseContextExample.jsx'
 import UseContextDemo from './UseContextDemo.jsx'
+import UseRef from './UseRef.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -37,10 +38,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/home' element={<Home />}></Route>
       <Route path='/about' element={<About />}></Route>
       <Route path='/contact' element={<Contact />}></Route>
-      <Route path='/lifecycle' element={<LifecycleClass  color='blue'/>}></Route>
+      <Route path='/useref' element={<UseRef />}></Route>
+      <Route path='/usememo' element={<UsememoExample />}></Route>
+      {/* <Route path='/lifecycle' element={<LifecycleClass  color='blue'/>}></Route>
       <Route path='/lifecyclefunc' element={<LifecycleFunction  color='blue'/>}></Route>
       {/* <Route path='/COntext' element={<UseContextExample />}></Route> */}
-      <Route path='/COntext' element={<UseContextDemo />}></Route>
+      {/* <Route path='/COntext' element={<UseContextDemo />}></Route> */} 
      
     </Routes>
     </BrowserRouter>    
