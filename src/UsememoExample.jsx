@@ -1,14 +1,16 @@
-import React,{useState,useMemo} from 'react'
+import React,{useState,useMemo, useCallback} from 'react'
+import TaskComponent from './TaskComponent'
 
 const UsememoExample = () => {
-    const [task,setTask] = useState("")
+  const [task,setTask] = useState("")
+  const [id,setId] = useState("")
     const [count,setCount] = useState(0)
     const [data,setData] = useState([])
-    const addTask = ()=>{
+    const addTask = useCallback(()=>{
         // setData([...data,"task added.."])
          setData([...data,task])
          setTask('')
-     }
+     },[task])
      const addCounter = ()=>{
         // setData([...data,"task added.."])
          setCount(count+1)
@@ -23,21 +25,39 @@ const UsememoExample = () => {
      }
      const calc = useMemo(()=> calcFunction({count}),[count])
     
+     const deleteTask =(id)=>{ //0 1  3
+        let data1 = data.filter((i,index)=>{
+          return index!=id
+        })
+        setData(data1)
+     }
+     const editTask =(id)=>{ //0 1  3
+        let data1 = data.filter((i,index)=>{
+            return index==id
+          })
+      setTask(data1[0])
+      setId(id)
+   }
+   const updateTask = ()=>{
+    let data1 = data.map((i,index)=>{
+        if(index == id){
+            i=task
+        }
+        return i;
+    })
+    console.log(data1);
+    setData(data1)
+    setId("")
+   }
     //  const calc = useMemo(()=>{
     //     return calcFunction({count})
     //  },[count]) 
   return (
     <div>
       <h3>Task List</h3>
-      {
-        data.map((i,index)=>{
-            return(
-                <div key={index}>{i}</div>
-            )
-        })
-      }
+     
       <input type='text' name="task" value={task} onChange={(e)=>setTask(e.target.value)}/>
-      <button onClick={addTask}>Add Task</button>
+      <TaskComponent data={data} id={id} addTask={addTask} deleteTask={deleteTask} editTask={editTask} updateTask={updateTask}/>
 
       <h4>Count is :{count}</h4>
       <button onClick={addCounter}>Add</button>
