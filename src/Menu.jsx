@@ -21,6 +21,7 @@ const Menu = () => {
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
             <Nav.Link as={Link} to="/useref">Use Ref</Nav.Link>
             <Nav.Link as={Link} to="/usememo">Use memo</Nav.Link>
+            <Nav.Link as={Link} to="/localstorage">Localstorage Example</Nav.Link>
 
             
             {/* <Nav.Link as={Link} to="/lifecycle">Lifecycle - Class</Nav.Link>

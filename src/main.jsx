@@ -21,6 +21,7 @@ import UsememoExample from './UsememoExample.jsx'
 import UseContextExample from './UseContextExample.jsx'
 import UseContextDemo from './UseContextDemo.jsx'
 import UseRef from './UseRef.jsx'
+import Localstorage from './Localstorage.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -40,6 +41,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/contact' element={<Contact />}></Route>
       <Route path='/useref' element={<UseRef />}></Route>
       <Route path='/usememo' element={<UsememoExample />}></Route>
+      <Route path='/localstorage' element={<Localstorage />}></Route>
       {/* <Route path='/lifecycle' element={<LifecycleClass  color='blue'/>}></Route>
       <Route path='/lifecyclefunc' element={<LifecycleFunction  color='blue'/>}></Route>
       {/* <Route path='/COntext' element={<UseContextExample />}></Route> */}
