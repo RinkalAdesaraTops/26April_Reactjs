@@ -84,9 +84,9 @@ function App() {
       {/* <Suspense fallback={(<div>Please wait...</div>)}>
         <Contact />
       </Suspense> */}
-      <Suspense fallback={<div>Loading....</div>}>
+      {/* <Suspense fallback={<div>Loading....</div>}>
         <Home />
-      </Suspense>
+      </Suspense> */}
       
       
     </>
