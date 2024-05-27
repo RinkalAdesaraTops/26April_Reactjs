@@ -18,7 +18,7 @@ const LocalstorageExample = () => {
     }
   return (
     <div>
-        <h3>CRUD With Localstorage</h3>
+      <h3>CRUD With Localstorage</h3>
       <input type="text" name="name" id="" value={name} onChange={(e)=>setName(e.target.value)} />
       <input type="button" value="Save Data" onClick={saveData}/>
       <input type="button" value="Get Data" onClick={getData}/>
