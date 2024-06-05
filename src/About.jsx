@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 const About = () => {
   const navigate = useNavigate()
@@ -14,9 +14,12 @@ const About = () => {
   }
   return (
     <div>
+      <Outlet />
+      
       My about Page
       <button onClick={prevMenu}>Previous</button>
       <button onClick={nextMenu}>Next</button>
+      
     </div>
   )
 }

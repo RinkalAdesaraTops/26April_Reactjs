@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import LocalstorageExample from './LocalstorageExample.jsx'
-import LocalstorageCRUD from './LocalstorageCRUD.jsx'
-import Mystylecomponent from './Mystylecomponent.jsx'
+
 import Apicomponent from './Apicomponent.jsx'
+import CustomHook from './CustomHook.jsx'
+import JSONservercrud from './JSONservercrud.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <LocalstorageExample /> */}
     {/* <LocalstorageCRUD /> */}
     {/* <Mystylecomponent /> */}
-    <Apicomponent />
+    {/* <Apicomponent /> */}
+    {/* <CustomHook /> */}
+    <JSONservercrud />
   </React.StrictMode>,
 )

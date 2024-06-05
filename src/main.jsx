@@ -21,7 +21,9 @@ import UsememoExample from './UsememoExample.jsx'
 import UseContextExample from './UseContextExample.jsx'
 import UseContextDemo from './UseContextDemo.jsx'
 import UseRef from './UseRef.jsx'
-import Localstorage from './Localstorage.jsx'
+import Localstorage from './Localstorage'
+import Aboutdata from './Aboutdata.jsx'
+import Aboutinfo from './Aboutinfo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -37,7 +39,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
     <Route path='/' element={<Home />}></Route>
       <Route path='/home' element={<Home />}></Route>
-      <Route path='/about' element={<About />}></Route>
+      <Route path='/about' element={<About />}>
+        <Route path='aboutdata' element={<Aboutdata />}/>
+        <Route path='aboutinfo' element={<Aboutinfo />}/>
+      </Route>
       <Route path='/contact' element={<Contact />}></Route>
       <Route path='/useref' element={<UseRef />}></Route>
       <Route path='/usememo' element={<UsememoExample />}></Route>
